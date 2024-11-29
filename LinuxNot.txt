@@ -1,0 +1,473 @@
+— Bölüm 1 —
+
+Linux Nedir?
+
+İşletim sistemi çekirdek yazılımıdır.
+
+Linux işletim sisteminin çekirdeğini oluşturur. GNU ise kullanıcı yazılımlarını oluşturur.
+
+Sanallaştırma Nedir?
+
+Bilgisayarımızın kaynaklarını oluşturduğumuz sanal bilgisayarlar ile paylaşmamıza yarayan teknolojidir.
+
+Terminal Ortamı
+
+Kabuk (Shell) ile etkileşime geçmek için kullandığımız grafik arabirimdir.
+
+whoami —> Hangi kullanıcının oturumda olduğunu gösterir
+
+uname -a —> Sistem özelliklerini ekrana basar
+
+ping -c4 [ubuntu.com](http://ubuntu.com) —> Ubuntu.com’a 4 kere ping at
+
+ctrl + alt + t —> Terminal penceresini açar
+
+~ —> Kullanıcı ana dizinini ifade eder (İşlem yapmakta olduğumuz klasör)
+
+$ —> Şu anda oturum açan kullanıcının normal kullanıcı hakları ile işlem yaptığını belirtir
+
+date —> Şuanki tarih ve saati söyler
+
+ls —> Dosyaları listele
+
+ls -a —> a burada bir parametre ve all ifadesini temsil eder ve gizli olan dosyaları da listeliyor
+
+! Klasör başındaki . onların gizli olduğunu belirtir !
+
+ls -l —>  Listeli bir şekilde gösterilmesini sağlar (Daha ayrıntılı)
+
+pwd —> İçinde buldunduğumuz dizini gösterir
+
+cd —> Herhangi bir dizinin içerisine gidebilmek için
+
+cd .. —> Bir önceki dizine dönmek için
+
+Tab —> Kodları otomatik tamamlamak için
+
+man —> Klavuzu bulunan komut ve programları okumak için
+
+history —> Komut geçmişini gösterir
+
+history -c —> Komut geçmişini siler
+
+Linuxta her şey bir dosyadır. Hangi türde olduğunu anlamak için başlarında yazan şeye bakmak gerekir.
+
+Dosyalar (-), Dizinler (Klasör)(d), Bağlantılar (l) ile ifade edilir.
+
+Lİnuxta dosya sistemi hiyerarşiktir.
+
+Kök Dizin = Tüm dizinleri içerir. Hiyerarşinin başladığı yerdir. (/ İşareti ile gösterilir) Daha üstü bi klasör yoktur.
+
+Kök Dizin Altında Bulunan Klasörler:
+
+/bin —> Temel kullanıcı komutları
+
+/boot —> Açılıştaki statik dosyalar
+
+/dev —> Cihaz dosyaları
+
+/etc —> Sisteme özel ayarlar
+
+/home —> Kullanıcı ana dizinleri
+
+/lib —> Temel kütüphaneler ve çekirdek modülleri 
+
+/media —> Çıkarılabilir ortam dosyaları
+
+/mnt —> Yerleştirilen dosya ortam dosyaları
+
+/srv —> Servis dosyaları
+
+/tmp —> Geçici dosyalar
+
+/var —> Çeşitrli dosyalar (log dosyaları, kayıt dosyaları)
+
+/root —> Root kullanıcısı için ana dizin (Root kullanıcısı home’da değil burada)
+
+cd - —> Bir önceki bulunduğumuz dizine gitmek için
+
+mkdir klasör_adi —> Klasör olusturma
+
+touch dosya_adi —> Dosya oluşturmak için
+
+touch dosya_adi dosya_adi dosya_adi —> Çoklu dosya oluşturma (mkdir komutu için de olur)
+
+rm dosya_adi —> Dosya silmek için
+
+rm -r klasör_adi —> Klasör silmek için
+
+cp dosya_adi  yeni_dosya_adi—> Dosya kopyalamak ve yeni isimle kaydetmek için
+
+cp dosya_adi /klasör_cadi —> Kopyalayıp istenilen Klasöre kaydetmek için
+
+cp dosya_adi ../ —> Bir üst dizine kopyalamak için
+
+Başka bir yere kaydedilecek ise kök dizininden itibaren yazıyoruz. (cp /home/Documents/deneme.txt   /home/Desktop/yeni_deneme.txt )
+
+cp -r kasör_ismi/ taşınacak_klasör_ismi/ —> Klasörleri kopyalamak için
+
+mv ‘dosya_adi’ taşımak_istediğimiz_dizin —> Dosyaları taşımak için (home/documents gibi) (dosya adlarında boşluk bırakarak birden fazla dosya aynı anda taşınabilir)
+
+ls -al listelemek_istediğimiz_dizin —> İstediğimiz dizini listelemek için
+
+mv /klasör_ismi /taşınacak_klasörün_ismi —> Klasör taşımak için (dizin=klasör)
+
+İsim değiştirmek için yine mv komutunu kullanıyoruz.
+
+mv dosya_adi dosyanin_yeni_adi —> Dosya adını değiştiriyoruz
+
+mv dosya_adi dizin/dosya_adi —> Başka bir dizine yeni bir ad ile kaydetme
+
+mv klasor_ismi/ yeni_klasor_ismi/ —> Klasör ismi değiştirmek için
+
+tar -zcvf arsiv_adi.tar arsivlemek_istedigimiz_dosya —> Dosyaları arşivlemek için (Boşluk bırakarak birden fazla dosyayı yazabiliriz)
+
+tar -zcvf arsiv_adi.tar dizin_adi —> Dizin arşivlemek için
+
+tar -zxvf  arşiv_ismi .tar —> Arşivi çıkarmak için
+
+Nano bir metin düzenleyicisidir.
+
+ nano dosya_ismi —>  Nano da dosya açmak ya da yeni dosya oluşturup açmak için
+
+ctrl + X —> Nanodan çıkmak için
+
+cat dosya_ismi —> Dosyayı okumak için (Boşluk bırakıp başka dosyaların ismini yazaarak onları da okuyabiliriz)
+
+ctrl + O —> Dosyayı farklı bir isimle kaydetmek için
+
+ctrl + W —> Dosya içinde arrama yapmak için
+
+Birden fazla aynı kelime varsa diğer kelimeye gitmek için alt + w yapıyoruz.
+
+vi komutu, vim metin editörünü çağırmak için kullanılır. (Vi de bir metin editörüdür)
+
+vi dosya_ismi —> Vi ile dosya açmak için
+
+: basıldığında text editörü modundan çıkarak komut yazılabilecek hale gelir. (Komut satırı moduna geçer)
+
+:qa —> vimden çıkmak için 
+
+gedit programı grafik arabirimine sahip olan bir metin editörüdür.
+
+gedit dosya_adi —> Geditle dosya açmak için
+
+cat -n dosya_adi —> Satırları numaralı gösteriyor
+
+cat -E dosya_adi —> Satır sonlarını işaretlemek için ($ işareti ile)
+
+tac dosya_adi —> Dosyayı ters çevirip sıralıyor (cat komutunun tersi)
+
+head dosya_adi —> Dosyanın ilk satırlarını ekrana yazdırır (ilk 10 satır)
+
+head -n5 dosya_adi —> Baştan 5 satır oku (Kaç satır okuyacağını belirliyoruz)
+
+tail dosya_adi —> Bir dosyanın son satırlarını ekrana yazdırır (son 10 satır)
+
+tail -n7 dosya_adi —> Son 7 satır
+
+tail -f dosya_adi —> Dosyayı canlı takip etmek için
+
+more dosya_adi —> Ekrana sığmayan metinlerin daha kolay okunmasını sağlar (Enter tuşuna basarak aşağı iniyoruz) (Q tuşu ile direk çıkıyoruz)
+
+nl dosya_adi —> Boş olan satırlar hariç diğer satırlara satır numarası ekler
+
+file dosya_ismi —> Dosyanın ne tür bir dosya olduğunu hakkında bilgi verir
+
+wc metinbelgesi_adi —> Metin belgeleri hakkında bilgi almak için
+
+(Satır sayısı, kelime sayısı, dosyanın byte boyutu ) (Sadece kelime sayısını merak ediyorsa wc -w belge_adi)(satir sayısı -l)(byte için -c)(-L dosya içindeki en uzun satır kaç harften oluşuyor)
+
+sort belge_adi —> Belgeyi sıralamak için
+
+sort -k 2 belge_adi —> Hangi sütundan itibaren sıralanacağını belirler (2. sütun)
+
+sort -c belge_adi —> Belgenin sıralı olup olmadığını söyler
+
+sort -r belge_adi —> Listeyi tersten sıralamak için
+
+sort -k 2 -r belge_adi —> Belgeyi 2. sütundan ters olarak sırala
+
+sort -k 2 -r belge_adi -o yeni_isim—> Belgeyi 2. sütundan ters olarak sırala ve yeni ismiyle kaydet(-o parametresi kaydetmeyi sağlar)
+
+sort -R belge_adi —> Karışık şekilde sıralamak için
+
+grep ‘aramak istediğimiz kelime’ dosya_adi —> Aradığımız kelimeyi satırla beraber yazıyor
+
+grep -v ‘Aramak istemediğimiz kelime’ dosya_Adi —> Aramak istemediğimiz kelime harici yazdırıyor (Harf de olur)
+
+Büyük küçük harf uyumunu kaldırmak için -i parametresini kullanıyoruz
+
+grep -i ‘T’ dosya_adi gibi
+
+Boşluk bırakarak birden fazla liste içinde de arayabiliyoruz
+
+grep -i ‘aranan kelime’ -l dosya_adi —> Sadece içinde geçen dosyaları bastırıyor satırları değil (-c parametresi ile kaç kere geçtiğini sayı olarak öğreniyoruz)
+
+
+—Bölüm 2 —
+
+
+Wilcard —> Komutları yazarken kriter oluşturmamızı sağlayan özel karakterlerdir. Filtreleme işlevi görür. Zaman kazandırır.
+
+*—> Bir veya birden fazla karakterin yerine geçebilecek bir joker karakteridir.
+
+? —> Yalnzıca bir karakterin yerine geçebilecek birjoker karakteridir.
+
+[]—> Yerine geçeceği karakterleri küme şeklinde belirten bir wilcard operatörüdür.
+
+ls *.html —> Sadece html uzantılı dosyaları listeler
+
+ls 1[12]*txt —> İçinde 1 den sonra 1 veya 2 gelen dosyaları listele
+
+cat belge_adi > taşınacak_belge_adi —>  Belgenin içeriğini yenl oluşturulacak olan belgeye taşıyor (Öyle bi belge varsa içeriğini silip yenisini yazıyor)
+
+cat belge_adi >> taşınacak_belge_adi —> Taşınacak belgenin içeriğini silmez sadece sonuna ekler
+
+|—> Bir parameterenin çıktısını bir diğer parametreye girdi olarak vermek için
+
+ls -l | grep aranacak_kelime —> Klasörler arasında fizik geçen yerleri buluyor (Dosya çıktısını verdik arama parametresine)
+
+‘|’ operatörü ile zincirleme parametreler oluşturabiliriz. (Komutlar soldan sağa doğru çalışır)
+
+Alias, takma ad demektir. Linux terminal ortamında uzun komutları, parametreleri ve argümanları beraber kullandığımız durumlar olabilir. Sık kullandığımız komutları tekrar tekrar yazmak yerine, onlara kısa adlar vererek kullanmak için alias’tan faydalanırız.
+
+**T**erminal ortamında yeni bir alias tanımlamak için alias kisaad=‘komut --parametre arg’ komutunu kullanırız. Örneğin, apt-get update komutuna “guncelle” takma adını tanımlayarak çalıştırmak için şu komutu kullanırız:/etc
+
+alias guncelle=’apt-get update’
+
+Tanımlı bir alias tanımını iptal etmek için kullancağımız komut unalias komutudur.
+
+Kalıcı olmasını istediğimiz alias tanımlarını aşağıdaki komutla düzenlediğimiz dosyaya eklemeliyiz:
+
+cat ~/.bashrc
+
+Root Kullanıcısı = Tüm yetkilere ve erişime sahiptir. Sistem seviyesinde yetkiler için kullanılır. Ev dizinleri /root dizinidr.
+
+Genel Amaçlı Kullanıcı = Kendilerine veya gruplarına tanımlı yetkileri kullanırlar. Ev dizinleri /home dizini altında bulunur.
+
+GID —> Grup ID 
+
+Grup üyelikleri /etc/group altında tanımlanır
+
+cat   /etc/passwd —> Bütün kullanıcıların listesi bulunur (sütuunlar birbirinden : ile ayrılır )
+
+kullanici_adi : şifre()artık turulmuyor) : kullanici id : grup id : kullanici_tam_ismi : kullanici_dizini : kabuk_erişimi
+
+cat /etc/shadow —> Şifrelerin tutulduğu yer sadece root kullanıcıs okuyabilir (başına sudo yazarak)
+
+sudo useradd yeni_kullanici_ismi —> Yeni kullanıcı eklemek için
+
+sudo passwd kullanici_adi —> Şifre değiştirmek için
+
+sudo adduser kullanici_ismi —> Yeni kullanıcı ekleme ama daha detaylı
+
+sudo deluser kullanici_ismi —> Kullanıcı silmek için (sudo userdel kullanici_ismi)
+
+cat /etc/group —> Grupları okumak için (grup_adi : grup_parolası : grup_adi : grup_kullanıcılari)
+
+sudo addgroup grup_ismi —> Grup eklemek için
+
+sudo delgroup grup_ismi —> Grubu silmek için 
+
+sudo usermod -a -G grup_adi  eklenecek_kullanici_adi
+
+Her dosya, dizin ve uygulamanın sahibi olan bir kullanıcı ve grup bulunmaktadır.
+
+Dosya İzinleri Sahip Kullanıcı Sahip Grup 
+
+‘r’ead —> Okuma  ‘w’rite —> Yazma  e’x’ecute —> Çalıştırma
+
+İlk izin kısmı Kullanıcı izinleri, ikinci izin kısmı kullanıcı izinleri , üçüncü izin kısmı herkes için olan
+
+izinleri görmek için ayrıntılı listelemek gerekiyor —> ls -al —> kısa komutu —> ll 
+
+sudo chown kullanici_ismi dosya_adi —> Dosyanın yeni sahibini o kullanıcı yaptık
+
+sudo chgrp grup_ismi dosya_adi —> Dosyanın grubunu değiştirmek için
+
+sudo chown -R kullanici_adi klasör_adi —> Klasörün ve içindekilerin sahibini değiştirmek için
+
+sudo chgrp -R grup_adi klasör_adi —>  Klasörün grubunu ve içindekilerin de grubunu değiştirmek için
+
+sudo chown -R kullanici_adi:grup_adi dosya_adi —> Böylece kolayca hem kullanıcı hem de grup adı değiştiriliyor
+
+d xxx xxx xxx —> 1. dosyanın türünü söyler, 1. üçlük dosya sahibi yetkileri 2. üçlük dosya grubu erişim yetkileri 3. üçlük bunların dışında kalan kullanıcıların yetkileri
+
+execute —> 1 , write —> 2, read —> 4 (Dosya izinleri birbiri ile toplanır) (664 gibi)
+
+chmod +(yetkinin_harfi) dosya_adi —> Dosyanın iznini değiştirmek için (Kullanıcı ve grup için olan izinlerini değiştiriyor)
+
+chmod -(izin_harfi) dosya_adi —> Kaldırılacak olan izin
+
+chmod sayısal_ifade(662 gibi) dosya_adi —> Dosyanın izinlerini toplu değiştirmek için
+
+chmod -R 777(izinler) klasör_adi —> Klasörün altındaki bütün herkesin izinlerini etkiliyor
+
+
+— Bölüm 3 —
+
+
+Linux’ta çalışan her program bir süreçtir. Ancak bir program birden fazla süreç olarak çalışabilir.
+
+Process ID (PID) — User ID (UID) — Parent Process ID (PPID)
+
+Ana sürecimizin oluşturduğu diğer süreçlerin Process ID’leri Ana süreçleri gösterir
+
+ps -ef—> ps komutu sistem üzerinde çalışan süreçleri görebilmemizi sağlar
+
+ps -aukullanici_adi —> Sadece o kullanıcıya ait çalıştırılan işlemler
+
+sudo apt install htop —> İşlemleri canlı olarak takip edebilmek için kuruyoruz
+
+htop —> Uygulamayı çalıştırmak için
+
+f5 ile süreçleri daha iyi inceleybiliyoruz
+
+kill process_id —> Sonlandırmak istediğimiz programın id’sini giriyoruz
+
+kill -9 process_id —> Programı aniden kapatmak için
+
+kill -15 process_id —> Programı daha yavaş kapatıyor, kaydetmek için süre oluyor
+
+pkill anahtar_kelime —> Anahtar kelimenin geçtiği bütün işlemleri kapatır
+
+& —> Süreç çalışırken aynı anda terminal kullanımına devam etmek için (firefox & gibi)
+
+nohup —> Terminale bağlı olmadan çalıştırmak için (nohup firefox & gibi)
+
+ctrl + z —> İşlemi arka plana atmak için
+
+bg —> Arka planda çalışan işleri görmek için
+
+disown -h %uygulamanın_bg_id —> Programı terminalden koparmak için
+
+Linuxta arka planda gerektiğinde kullanılamak için sürekli çalışan uygulamalara servis denir.
+
+systemctl —> Linuxta sistem üzerindeki servisleri yönetmemizi sağlar  
+
+systemctl list-units —type service —> Sistem üzerindeki servis ünitelerini görüntülememizi sağlar
+
+systemctl list-units —type service —state running —> O an çalışmakta olan servisleri görüntüler
+
+systemctl status bilgi_almak_istediğimiz_servis —> O servis hakkında bilgi alıyoruz
+
+sudo systemctl stop servis_adi —> Bir servisi durdurmak istediğimizde
+
+sudo systemctl start servis_adi —> Bir servisi başlatmak istediğimizde
+
+sudo systemctl restart servis_adi —> Yeniden başlatmak istediğimiz servislerde kullanıyoruz
+
+NAT —> Sanal modem oluşturup sanal bilgisayara bağlamak için, IP adresimiz farklı oluyor
+
+ip addr show —> Bağlantı bilgilerini öğrenmek için (ip a —> Kısa komutu)
+
+hostname -I (büyük i)—> Sadece ip adresini verir
+
+ping adres_adi —> siteye ping atmak için (ctrl + c ile çıkıyoruz)
+
+ping -c 5 adres —> Sadece 5 ping atmak için
+
+tcpdump programı bilgisiyarımızdan gelen ve giden tcp paketlerini gösterir.
+
+sudo tcpdump -v —> Ağ trafiğini izlemek için
+
+iftop programı bağlandığımız sunucuları ve gelen/giden paket istatistiklerini göster
+
+sudo iftop —> Yüklemek için   sudo iftop —> Başlatmak için
+
+sudo apt install wireshark —> wireshark yüklemek için
+
+sudo wireshark —> Programı başlatmak için, İnterface seçiyoruz
+
+sudo bm -h—>  Geçmişte açılan programları görmek için
+
+wget programı dosya indirmeyi sağlayan bir indirme yöneticisidir.
+
+wget sayfa_adresi —> O adresi indiriyor (indireceğimiz dosyanın adresi) (Hangi dizindeysek oraya indiriyor)
+
+sudo apt install ssh —> ssh indirmek için
+
+sudo systemctl enable ssh —> ssh aktif hale getirmek için
+
+ssh kullanici_adi @uzaktaki_pc_ip_adresi —> Uzaktaki bilgisayarımıza bağlanmak için
+
+sudo systemctl disable ssh —> ssh durdurmak için
+
+sudo systemctl stop ssh —> Geçici olarak durdurmak için
+
+DNS (domain name system) —> İsimleri IP adreslerine çevirmek için kullanılan bir sistemdir.
+
+nslookup alan_adi —> IP adresini öğrenmek istediğimiz alan adını giriyoruz
+
+nslookup IP_adresi —> IP adresinin adını öğrenmek istediğimizde (her zaman çalışmıyor)
+
+nslookup -query=mx site_adi —> O sitenin mail sunucularını öğrenmek için
+
+nslookup -query=ns site_adi —> O sitenin isim sunucularını öğrenmek için
+
+ssh 22. portta çalışır.
+
+
+— Bölüm 4 —
+
+
+Paketler genelde bir yazılımın derlenmiş hali ya da kaynak kodudur.
+
+Paket yöneticileri, bilgisayarımıza bir paketi kolaylıkla kurmamızı, kaldırmamızı ve yapılandırmamızı sağlayan sistemlerdir.
+
+apt, bilgisayarımıza bir paketi kolaylıkla kurmamızı, kaldırmamızı ve yapılandırmamızı sağlayan paket yönetim sistemidir.
+
+apt update —> Paketlerin listesini günceller (apt’ler sudo komutu ile yapılması gerek)
+
+apt install program_adi —> İstediğimiz programı yükler
+
+apt remove program_adi —> İstediğimiz programı kaldırır
+
+apt upgrade —> Kurulu paketleri günceller
+
+cat /etc/apt/sources.list —> Paket listelerinin tutulduğu yer
+
+apt search anahtar_kelime —> Ne yazacağımızı bilmiyorsak uygulama isimlerini böyle aratabiliriz
+
+apt list —upgradable  —> Güncellenebilir uygulamaların listesi (güncelleme yapmak için sudo apt install program_adi)
+
+sudo apt autoremove —> Artık ihtiyaç duyulmayan paketler listelenir ve silinir
+
+sudo apt purge paket_adi —> Paketle ilgili dosyaları ve ayarları da kaldırır
+
+dpkg —> Debian paket yönetim sisteminin temeli
+
+sudo dpkg -i paket_adresi —> Dosyayı direk paketten kurmak için
+
+sudo !! —> Bi üstteki satırı sudo komutu ile çalıştır
+
+sudo dpkg -r paket_ismi —> Paketi kaldırmak için
+
+echo “yazdirilacak_sey”—> Ekrana bir şey yazdırmak için
+
+Shell programlarının en başında hangi shell türüyle çalıştırılacağı yer alır. —> ##!/hangi_shell —> #!/bin/sh
+
+Terminal penceresinde (kabuğa eriştiğimiz zaman) belli bir düzen içinde yazdığımız çalıştırılabilir dosyalara kabuk program dosyaları denir.
+
+sh, bash, dash(debian için daha hızlı) | file -h /bin/sh —> Hangisini kullanıyor görmek için
+
+read —> Kullanıcıdan veri almak için
+
+bash dosya_adi.sh —> Çalıştırma izni olmadan çalıştırmak için
+
+‘#’ —> Yorum bırakmak için
+
+değişkenlerin başında $ işareti kullanıyoruz.
+
+sleep saniye —> Bekletme süresi girmek için
+
+Desktop Environment —> İşletim sistemi üzerine kurulan ortak bir kullanıcı ara yüzü yazılımıdır. Birçok yazılımın birleşmesinden oluşur. Sadece ikonlar pencereler değil, bir çok yaygın programı da içerirler.
+
+sudo apt install xfce4 —> xfce4 desktop environment yüklemek için (gdm3)
+
+Kullanıcı girişinden ayarlar kısmından masaüstü ortamını seçiyoruz
+
+sudo apt install ubuntu-mate-desktop —> Mate kurulumu için
+
+chmod +x dosya_adi —> Dosyaya çalıştırılabilir yetkisi vermek için
